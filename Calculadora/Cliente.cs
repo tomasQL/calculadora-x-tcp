@@ -1,6 +1,6 @@
 namespace Calculadora;
 
-public class CalculatorClient
+public class Cliente
 {
     
 }
