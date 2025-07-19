@@ -31,8 +31,9 @@ devolviendo su resultado.
 Clase Operaciones: permite llevar un registro de objetos de la calculadora.  
 
 CalculadoraServer():  
-1. Crea un objeto calculadora.  
-2. Crea una lista de operaciones.  
+ 1. Crea un objeto calculadora.  
+ 2. Crea una lista de operaciones a modo de historial.  
+
 IniciarServidor():  
 Define las propiedades necesarias para crear un objeto TCPListener donde  
 encapsularemos la funcionalidad del "servicio", mediante un stream de datos  
@@ -43,7 +44,7 @@ Cuando iniciamos la "escucha" del Stream de datos, entramos en varios ciclos
 de evaluación (while's e if's) con captura de errores mediante try-catch.  
 1. Recibimos y codificamos el stream en una variable llamada "datos".  
 2. Datos es dividida en partes según el uso del símbolo espacio para identificar  
-   Operador1 Operando Operador2.  
+   *Número1 Operador Número2*.  
 3. Traducimos el string a los tipos correspondientes (Double-Numeric) 
 4. Utilizamos un Switch para manejar el caso específico de cada operador.  
 5. Invocamos en cada case statement el método correspondiente al operador  
@@ -52,6 +53,6 @@ de evaluación (while's e if's) con captura de errores mediante try-catch.
 7. El resultado es codificado y como stream de datos por el servidor.  
 8. Se cierra la conexión.  
 
-## Cliente:  
+## Cliente:  
 
 *Nunca tiene la razón*
